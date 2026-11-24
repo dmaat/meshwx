@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meshwx"
+version = "0.1.0"
+description = "Weather and transit broadcasts over Meshtastic (serial), built for Raspberry Pi Zero"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "meshtastic>=2.7,<3",
+    "requests>=2.31,<3",
+    "PyYAML>=6.0,<7",
+    "tzdata; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+gtfs = ["gtfs-realtime-bindings>=1.0"]
+dev = ["pytest>=7", "gtfs-realtime-bindings>=1.0", "tzdata"]
+
+[project.scripts]
+meshwx = "meshwx.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dmaat/meshwx"
+Issues = "https://github.com/dmaat/meshwx/issues"
+
+[tool.setuptools.packages.find]
+include = ["meshwx*"]
+
+[tool.setuptools.package-data]
+meshwx = ["data/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

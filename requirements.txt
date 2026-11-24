@@ -1,0 +1,18 @@
+# meshwx runtime dependencies - the same as pyproject.toml (keep them in sync).
+#
+# Preferred:   pip install ".[gtfs]"          (installs meshwx and the "meshwx" command;
+#                                               deploy/install.sh does this on the Pi)
+# Alternative: pip install -r requirements.txt, then run from the checkout:
+#              python -m meshwx ...
+#
+# On a Raspberry Pi always use a virtualenv: Raspberry Pi OS refuses system-wide
+# pip installs (PEP 668), and its apt package python3-protobuf is too old for
+# gtfs-realtime-bindings 3.x.
+
+meshtastic>=2.7,<3
+requests>=2.31,<3
+PyYAML>=6.0,<7
+tzdata; sys_platform == "win32"
+
+# Transit provider "gtfs_rt" (GTFS-Realtime feeds) - the [gtfs] extra.
+gtfs-realtime-bindings>=1.0

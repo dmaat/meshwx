@@ -1,0 +1,160 @@
+# =============================================================================
+#  meshwx configuration
+#  Weather + transit broadcasts over Meshtastic.
+#
+#  Copy to config.yaml (or /etc/meshwx/config.yaml on the Pi) and edit.
+#  Tip: always put ZIP codes, node ids and stop ids in "quotes".
+#  After editing: sudo systemctl restart meshwx
+# =============================================================================
+
+# ----------------------------------------------------------------- location
+location:
+  # US ZIP code to report weather for.  <-- change this
+  # Can also be changed while running: mesh admin command "!setzip 90210"
+  # or on the Pi: meshwx set zip 90210
+  zip_code: "02108"
+  # 2-letter country code for the ZIP lookup (zippopotam.us); "us" for the USA.
+  country: "us"
+  # Optional: exact coordinates instead of the ZIP's centre (both required).
+  # latitude: 42.3570
+  # longitude: -71.0640
+  # Optional display name override, e.g. "Home" (default: "City, ST" from the ZIP).
+  name: ""
+
+# ----------------------------------------------------------------- display
+display:
+  units: imperial          # imperial (F, mph, inHg) | metric (C, km/h, hPa)
+  ascii_only: false        # true = no degree signs/symbols (saves a few bytes)
+  time_format: 12h         # 12h | 24h
+  number_parts: true       # add " 1/3" to messages split across packets
+
+# ----------------------------------------------------------------- weather
+weather:
+  # nws       = US National Weather Service (US only, includes alerts, no key)
+  # openmeteo = Open-Meteo (worldwide, no key, no alerts)
+  provider: nws
+  fallback_provider: openmeteo   # used when the main provider fails; "" = none
+  forecast_periods: 4            # NWS half-days ("Tonight", "Fri"...) or Open-Meteo days
+  include_alerts: true
+  cache_minutes: 10              # reuse fetched weather for this long
+  # Optional contact (email or URL) for the User-Agent header, as NWS requests. It is sent
+  # with every web request meshwx makes (weather, ZIP lookup and transit services).
+  contact: ""
+  allow_other_zips: true         # let mesh users ask "!wx 90210"
+
+# ----------------------------------------------------------------- broadcasts
+broadcast:
+  enabled: true
+  # Channel index to broadcast on. 0 = primary (often the public LongFast
+  # channel). Be kind: create a secondary channel (e.g. index 1 "Weather")
+  # on your node and in the listeners' apps, and use that index here.
+  channel_index: 0
+  # How often to broadcast, in minutes (15-10080). 0 = no scheduled broadcasts.
+  # Can also be changed while running: mesh admin command "!setinterval 60"
+  # or on the Pi: meshwx set interval 60
+  interval_minutes: 180
+  # true: run at clock-aligned times (180 -> 00:00, 03:00, 06:00 ... local time)
+  # false: run every interval_minutes counted from when the service started.
+  align_to_clock: true
+  # Fixed local times instead of an interval, e.g. ["07:00", "12:00", "18:00"].
+  # When this list is non-empty it replaces interval_minutes.
+  times: []
+  # No scheduled broadcasts between these local times (alerts still go out).
+  quiet_start: ""          # e.g. "22:00"
+  quiet_end: ""            # e.g. "06:00"
+  # What a scheduled broadcast contains: current, forecast, alerts, transit
+  content: [current, forecast, alerts]
+  on_startup: false        # also broadcast once right after the radio connects
+  # Severe-weather alerts: check NWS for new alerts every alert_check_minutes
+  # and broadcast each NEW alert immediately - ahead of other messages and
+  # even during quiet hours. Each alert is sent once (remembered across
+  # restarts). US / nws provider only.
+  alert_watch: true
+  alert_check_minutes: 5   # 1-240
+  alert_min_severity: Moderate   # Minor | Moderate | Severe | Extreme
+  # Channel for alerts. null = same as channel_index. Tip: routine weather on
+  # a secondary channel, but alerts on 0 (primary) so everyone hears them.
+  alert_channel_index: null
+
+# ----------------------------------------------------------------- commands
+commands:
+  enabled: true
+  # Prefix required for commands sent on a channel ("!wx"). In direct
+  # messages to the node the prefix is optional ("wx" works).
+  prefix: "!"
+  channels: [0]            # channel indexes to listen for commands on (DMs always work)
+  reply_on_channel: true   # false = answer channel commands with a DM instead
+  cooldown_seconds: 30     # per-node rate limit
+  # Node ids allowed to run admin commands (setzip, setinterval, broadcast).
+  # Find yours in the Meshtastic app (node details). Quote them!
+  admins: []               # e.g. ["!a1b2c3d4"]
+
+# ----------------------------------------------------------------- radio
+meshtastic:
+  connection: serial       # serial | tcp
+  # Serial device. "" = auto-detect. On a Pi usually /dev/ttyUSB0 or
+  # /dev/ttyACM0; the installer's udev rule also creates /dev/meshtastic.
+  serial_port: ""
+  tcp_host: ""             # for connection: tcp (WiFi/Ethernet nodes)
+  tcp_port: 4403
+  reconnect_min_seconds: 10
+  reconnect_max_seconds: 300
+  max_message_bytes: 200   # per packet (protocol max 233)
+  message_delay_seconds: 8 # pause between packets we send (protects airtime)
+  hop_limit: null          # null = node default (usually 3)
+  dm_want_ack: true        # ask for delivery ACKs on direct-message replies
+  skip_node_db: false      # true = faster connect on a Pi Zero (no node names in logs)
+  max_queue: 40            # packets waiting to send before new requests are refused
+
+# ----------------------------------------------------------------- transit
+transit:
+  enabled: false
+  # gtfs_rt     = any agency's GTFS-Realtime TripUpdates feed (NYC subway, SEPTA,
+  #               King County, BART, MARTA, Denver RTD, CTA, TriMet, ...)
+  # mbta        = Boston MBTA v3 API (no key needed; key raises rate limit)
+  # onebusaway  = OneBusAway servers (Puget Sound, Tampa, San Diego, DC bus, ...)
+  # transitland = Transitland v2 API (almost any agency; free API key, 5000 calls/month)
+  # siri        = SIRI StopMonitoring (511.org Bay Area, NYC MTA Bus Time; API key)
+  provider: gtfs_rt
+  # Stops to report. "id" is the provider's stop id; "label" is what the mesh
+  # sees and what users type ("!bus park"). Optional "routes" filter and
+  # "direction_id" (0/1).
+  stops: []
+  #  - id: "place-pktrm"
+  #    label: "Park St"
+  #    routes: ["Red"]
+  #  - id: "1_75403"
+  #    label: "3rd & Pike"
+  max_arrivals: 3          # per route + destination
+  horizon_minutes: 90      # ignore arrivals further out than this
+  min_minutes: 0           # hide arrivals sooner than this (walking time)
+  cache_seconds: 60
+
+  gtfs_rt:
+    trip_updates_url: ""   # e.g. https://cdn.mbta.com/realtime/TripUpdates.pb
+    static_gtfs_url: ""    # e.g. https://cdn.mbta.com/MBTA_GTFS.zip (route names, destinations)
+    headers: {}            # header API key if needed, e.g. {"x-api-key": "YOUR_KEY"}
+    params: {}             # query API key if needed, e.g. {"key": "YOUR_KEY"} (CTA) or {"appID": "..."} (TriMet)
+    static_refresh_hours: 168
+    max_feed_age_seconds: 300  # ignore a realtime feed older than this
+  mbta:
+    api_key: ""            # optional (free at api-v3.mbta.com/register)
+    base_url: "https://api-v3.mbta.com"
+  onebusaway:
+    base_url: ""           # e.g. https://api.pugetsound.onebusaway.org
+    api_key: ""
+  transitland:
+    api_key: ""
+    base_url: "https://transit.land/api/v2/rest"
+  siri:                    # SIRI StopMonitoring: 511.org (Bay Area), MTA Bus Time (NYC)
+    url: "https://api.511.org/transit/StopMonitoring"
+    api_key: ""
+    key_param: "api_key"   # MTA Bus Time: "key"
+    stop_param: "stopcode" # MTA Bus Time: "MonitoringRef"
+    params: {}             # 511: {"agency": "SF", "format": "json"}; MTA: {"version": "2"}
+
+# ----------------------------------------------------------------- misc
+# Where runtime state (ZIP/interval overrides, caches) is kept.
+# "" = $STATE_DIRECTORY (systemd) or ~/.local/state/meshwx
+state_dir: ""
+log_level: INFO            # DEBUG | INFO | WARNING | ERROR

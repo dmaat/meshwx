@@ -1,0 +1,76 @@
+# meshwx - weather, severe-weather alerts and transit times over Meshtastic.
+#
+# Installed by deploy/install.sh as /etc/systemd/system/meshwx.service.
+# Put local changes in a drop-in so upgrades keep them:  sudo systemctl edit meshwx
+#
+# Paths: config /etc/meshwx/config.yaml, state /var/lib/meshwx (state.json),
+#        caches /var/cache/meshwx, code + virtualenv /opt/meshwx.
+# The "meshwx" command (/usr/local/bin/meshwx) runs the CLI as this service's
+# user with the same config, state and cache paths.
+
+[Unit]
+Description=meshwx weather and transit bot for Meshtastic
+Documentation=file:/opt/meshwx/src/README.md
+Wants=network-online.target
+After=network-online.target
+# Time-sensitive (schedules, alert expiry): order after the clock is set, but do
+# not pull time-sync.target in - per systemd.special(7) only NTP clients do that.
+# It only waits for NTP if systemd-time-wait-sync.service is enabled (the Pi has
+# no RTC; without it meshwx starts with the restored, slightly stale clock).
+After=time-sync.target
+# A crash loop (e.g. a config error) gives up after 5 starts in 15 minutes
+# instead of restarting forever and filling the journal. After fixing the cause:
+#   sudo systemctl reset-failed meshwx && sudo systemctl start meshwx
+StartLimitIntervalSec=900
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=meshwx
+Group=meshwx
+# Serial ports (/dev/ttyUSB*, /dev/ttyACM*) belong to the dialout group.
+SupplementaryGroups=dialout
+Environment=PYTHONUNBUFFERED=1 MESHWX_CONFIG=/etc/meshwx/config.yaml
+ExecStart=/opt/meshwx/venv/bin/meshwx run
+Restart=always
+RestartSec=15
+# A clean stop (closing the radio link, saving state) can take up to ~30 s on
+# a Pi Zero; systemd kills the process only after twice that.
+TimeoutStopSec=60
+
+# systemd creates these (owned by meshwx) and exports STATE_DIRECTORY and
+# CACHE_DIRECTORY, which meshwx uses when config.yaml leaves state_dir empty.
+StateDirectory=meshwx
+StateDirectoryMode=0750
+CacheDirectory=meshwx
+CacheDirectoryMode=0750
+WorkingDirectory=/var/lib/meshwx
+UMask=0027
+
+# Cap log bursts (crash loops, flapping USB) to spare the SD card.
+LogRateLimitIntervalSec=60s
+LogRateLimitBurst=300
+
+# Light hardening that keeps USB serial access working.
+# Do NOT add PrivateDevices=, ProtectClock=, DeviceAllow= or DevicePolicy=:
+# each of them (ProtectClock= implies DeviceAllow=char-rtc) puts the service
+# behind a device allow-list and /dev/ttyUSB0 / /dev/ttyACM0 can no longer be
+# opened.
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+# HTTP(S) + DNS, and TCP for "connection: tcp" nodes. No Bluetooth needed.
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+
+[Install]
+WantedBy=multi-user.target

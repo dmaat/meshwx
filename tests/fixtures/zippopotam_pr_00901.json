@@ -1,0 +1,14 @@
+{
+  "country": "Puerto Rico",
+  "country abbreviation": "PR",
+  "post code": "00901",
+  "places": [
+    {
+      "place name": "San Juan",
+      "longitude": "-66.1036",
+      "latitude": "18.4659",
+      "state": "Pr",
+      "state abbreviation": "72"
+    }
+  ]
+}

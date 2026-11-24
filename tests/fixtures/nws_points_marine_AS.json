@@ -1,0 +1,110 @@
+{
+  "@context": [
+    "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    {
+      "@version": "1.1",
+      "wx": "https://api.weather.gov/ontology#",
+      "s": "https://schema.org/",
+      "geo": "http://www.opengis.net/ont/geosparql#",
+      "unit": "http://codes.wmo.int/common/unit/",
+      "@vocab": "https://api.weather.gov/ontology#",
+      "geometry": {
+        "@id": "s:GeoCoordinates",
+        "@type": "geo:wktLiteral"
+      },
+      "city": "s:addressLocality",
+      "state": "s:addressRegion",
+      "distance": {
+        "@id": "s:Distance",
+        "@type": "s:QuantitativeValue"
+      },
+      "bearing": {
+        "@type": "s:QuantitativeValue"
+      },
+      "value": {
+        "@id": "s:value"
+      },
+      "unitCode": {
+        "@id": "s:unitCode",
+        "@type": "@id"
+      },
+      "forecastOffice": {
+        "@type": "@id"
+      },
+      "forecastGridData": {
+        "@type": "@id"
+      },
+      "publicZone": {
+        "@type": "@id"
+      },
+      "county": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://api.weather.gov/points/-14.3333,-170",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -170,
+      -14.3333
+    ]
+  },
+  "properties": {
+    "@id": "https://api.weather.gov/points/-14.3333,-170",
+    "@type": "wx:Point",
+    "cwa": "STU",
+    "type": "marine",
+    "forecastOffice": "https://api.weather.gov/offices/STU",
+    "gridId": null,
+    "gridX": null,
+    "gridY": null,
+    "forecast": null,
+    "forecastHourly": null,
+    "forecastGridData": null,
+    "observationStations": null,
+    "relativeLocation": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -169.6634721,
+          -14.1737558
+        ]
+      },
+      "properties": {
+        "city": "Ofu",
+        "state": "AS",
+        "distance": {
+          "unitCode": "wmoUnit:m",
+          "value": 33927.685750989
+        },
+        "bearing": {
+          "unitCode": "wmoUnit:degree_(angle)",
+          "value": 243
+        }
+      }
+    },
+    "forecastZone": "https://api.weather.gov/zones/forecast/PSZ158",
+    "timeZone": "Pacific/Pago_Pago",
+    "radarStation": null,
+    "astronomicalData": {
+      "sunrise": "2026-11-13T05:41:23-11:00",
+      "sunset": "2026-11-13T18:27:17-11:00",
+      "transit": "2026-11-13T12:04:20-11:00",
+      "civilTwilightBegin": "2026-11-13T05:18:48-11:00",
+      "civilTwilightEnd": "2026-11-13T18:49:52-11:00",
+      "nauticalTwilightBegin": "2026-11-13T04:52:11-11:00",
+      "nauticalTwilightEnd": "2026-11-13T19:16:29-11:00",
+      "astronomicalTwilightBegin": "2026-11-13T04:25:08-11:00",
+      "astronomicalTwilightEnd": "2026-11-13T19:43:32-11:00"
+    },
+    "nwr": {
+      "transmitter": null,
+      "sameCode": null,
+      "areaBroadcast": null,
+      "pointBroadcast": "https://api.weather.gov/points/-14.3333,-170/radio"
+    }
+  }
+}

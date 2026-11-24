@@ -1,0 +1,338 @@
+{
+  "@context": [
+    "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    {
+      "@version": "1.1",
+      "wx": "https://api.weather.gov/ontology#",
+      "@vocab": "https://api.weather.gov/ontology#"
+    }
+  ],
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1eea6b5a708d3f5682d1b6f909a4202eaec1c1c6.001.1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.9,
+              33.62
+            ],
+            [
+              -117.62,
+              33.82
+            ],
+            [
+              -116.97,
+              33.06
+            ],
+            [
+              -116.73,
+              32.57
+            ],
+            [
+              -117.17,
+              32.53
+            ],
+            [
+              -117.17,
+              32.6
+            ],
+            [
+              -117.27,
+              32.68
+            ],
+            [
+              -117.31,
+              32.85
+            ],
+            [
+              -117.28,
+              32.99
+            ],
+            [
+              -117.39,
+              33.16
+            ],
+            [
+              -117.63,
+              33.43
+            ],
+            [
+              -117.72,
+              33.46
+            ],
+            [
+              -117.78,
+              33.54
+            ],
+            [
+              -117.9,
+              33.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.1eea6b5a708d3f5682d1b6f909a4202eaec1c1c6.001.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.1eea6b5a708d3f5682d1b6f909a4202eaec1c1c6.001.1",
+        "areaDesc": "Orange, CA; Riverside, CA; San Diego, CA",
+        "geocode": {
+          "SAME": [
+            "006059",
+            "006065",
+            "006073"
+          ],
+          "UGC": [
+            "CAC059",
+            "CAC065",
+            "CAC073"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/county/CAC059",
+          "https://api.weather.gov/zones/county/CAC065",
+          "https://api.weather.gov/zones/county/CAC073"
+        ],
+        "references": [],
+        "sent": "2026-11-13T04:14:00-08:00",
+        "effective": "2026-11-13T04:14:00-08:00",
+        "onset": "2026-11-13T04:14:00-08:00",
+        "expires": "2026-11-13T06:15:00-08:00",
+        "ends": "2026-11-13T06:15:00-08:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Minor",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Flood Advisory",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS San Diego CA",
+        "headline": "Flood Advisory issued November 13 at 4:14AM PST until November 13 at 6:15AM PST by NWS San Diego CA",
+        "description": "* WHAT...Urban area and small stream flooding caused by excessive\nrainfall is expected.\n\n* WHERE...Riverside County in southern California...\nSoutheastern Orange County in southwestern California...\nWestern San Diego County in southwestern California...\n\n* WHEN...Until 615 AM PST.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\nWater over roadways.\n\n* ADDITIONAL DETAILS...\n- At 414 AM PST, Doppler radar indicated heavy rain due to\nthunderstorms. This  will cause urban and small stream flooding.\nBetween 0.25 and 0.5 inches of rain have fallen.\n- Additional rainfall amounts up...",
+        "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.",
+        "response": "Avoid",
+        "note": null,
+        "parameters": {
+          "AWIPSidentifier": [
+            "FLSSGX"
+          ],
+          "WMOidentifier": [
+            "WGUS86 KSGX 131214"
+          ],
+          "NWSheadline": [
+            "FLOOD ADVISORY IN EFFECT UNTIL 615 AM PST THIS MORNING"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.NEW.KSGX.FA.Y.0077.261113T1214Z-261113T1415Z/"
+          ],
+          "eventEndingTime": [
+            "2026-11-13T06:15:00-08:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "FAY"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f478126a4d0887d8cd2ffbfe0a4a1efad8e4677a.001.2",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.f478126a4d0887d8cd2ffbfe0a4a1efad8e4677a.001.2",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.f478126a4d0887d8cd2ffbfe0a4a1efad8e4677a.001.2",
+        "areaDesc": "Lauderdale; Colbert; Franklin; Lawrence; Limestone; Madison; Morgan; Marshall; Jackson; DeKalb; Cullman",
+        "geocode": {
+          "SAME": [
+            "001077",
+            "001033",
+            "001059",
+            "001079",
+            "001083",
+            "001089",
+            "001103",
+            "001095",
+            "001071",
+            "001049",
+            "001043"
+          ],
+          "UGC": [
+            "ALZ001",
+            "ALZ002",
+            "ALZ003",
+            "ALZ004",
+            "ALZ005",
+            "ALZ006",
+            "ALZ007",
+            "ALZ008",
+            "ALZ009",
+            "ALZ010",
+            "ALZ016"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/ALZ001",
+          "https://api.weather.gov/zones/forecast/ALZ002",
+          "https://api.weather.gov/zones/forecast/ALZ003",
+          "https://api.weather.gov/zones/forecast/ALZ004",
+          "https://api.weather.gov/zones/forecast/ALZ005",
+          "https://api.weather.gov/zones/forecast/ALZ006",
+          "https://api.weather.gov/zones/forecast/ALZ007",
+          "https://api.weather.gov/zones/forecast/ALZ008",
+          "https://api.weather.gov/zones/forecast/ALZ009",
+          "https://api.weather.gov/zones/forecast/ALZ010",
+          "https://api.weather.gov/zones/forecast/ALZ016"
+        ],
+        "references": [],
+        "sent": "2026-11-13T02:09:00-06:00",
+        "effective": "2026-11-13T02:09:00-06:00",
+        "onset": "2026-11-14T00:00:00-06:00",
+        "expires": "2026-11-13T16:00:00-06:00",
+        "ends": "2026-11-14T08:00:00-06:00",
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "urgency": "Expected",
+        "event": "Freeze Warning",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Huntsville AL",
+        "headline": "Freeze Warning issued November 13 at 2:09AM CST until November 14 at 8:00AM CST by NWS Huntsville AL",
+        "description": "* WHAT...Sub-freezing temperatures as low as 26 across Northern\nAlabama.\n\n* WHERE...Portions of north central, northeast, and northwest\nAlabama.\n\n* WHEN...For the first Freeze Warning, from midnight tonight to 8 AM\nCST Saturday. For the second Freeze Warning, from midnight Saturday\nNight to 8 AM CST Sunday.\n\n* IMPACTS...Frost and freeze conditions could kill crops, other\nsensitive vegetation and possibly damage unprotected outdoor\nplumbing.",
+        "instruction": "Take steps now to protect tender plants from the cold.",
+        "response": "Execute",
+        "note": null,
+        "parameters": {
+          "AWIPSidentifier": [
+            "NPWHUN"
+          ],
+          "WMOidentifier": [
+            "WWUS74 KHUN 130809"
+          ],
+          "NWSheadline": [
+            "FREEZE WARNING IN EFFECT FROM MIDNIGHT TONIGHT TO 8 AM CST SATURDAY NORTHERN ALABAMA... ...FREEZE WARNING IN EFFECT FROM MIDNIGHT SATURDAY NIGHT TO 8 AM CST SUNDAY"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "VTEC": [
+            "/O.NEW.KHUN.FZ.W.0003.261114T0600Z-261114T1400Z/"
+          ],
+          "eventEndingTime": [
+            "2026-11-14T08:00:00-06:00"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "NWS"
+          ],
+          "NationalWeatherService": [
+            "FZW"
+          ]
+        }
+      }
+    },
+    {
+      "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7eb3470d65e6afb8eb50359ac176328b271a7d49.002.1",
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.7eb3470d65e6afb8eb50359ac176328b271a7d49.002.1",
+        "@type": "wx:Alert",
+        "id": "urn:oid:2.49.0.1.840.0.7eb3470d65e6afb8eb50359ac176328b271a7d49.002.1",
+        "areaDesc": "Lower Columbia Basin of Washington",
+        "geocode": {
+          "SAME": [
+            "053005",
+            "053021",
+            "053039",
+            "053071"
+          ],
+          "UGC": [
+            "WAZ028"
+          ]
+        },
+        "affectedZones": [
+          "https://api.weather.gov/zones/forecast/WAZ028"
+        ],
+        "references": [],
+        "sent": "2026-11-13T01:58:00-08:00",
+        "effective": "2026-11-13T01:58:00-08:00",
+        "onset": "2026-11-13T01:58:00-08:00",
+        "expires": "2026-11-13T09:00:00-08:00",
+        "ends": null,
+        "status": "Actual",
+        "messageType": "Alert",
+        "category": "Met",
+        "severity": "Moderate",
+        "certainty": "Observed",
+        "urgency": "Expected",
+        "event": "Special Weather Statement",
+        "sender": "w-nws.webmaster@noaa.gov",
+        "senderName": "NWS Pendleton OR",
+        "headline": "Special Weather Statement issued November 13 at 1:58AM PST by NWS Pendleton OR",
+        "description": "Areas of dense fog have been observed along the Columbia Basin of\nWashington including but not limited to: Interstate 82, WA-240.\nand Route 395. Within fog, visibilities as low as one-half mile\nare expected to persist through the overnight. Use extra caution\nwhile traveling as visibility can change quickly. If fog is\nencountered, use low-beam headlights and keep plenty of space\nbetween you and other vehicles.",
+        "instruction": null,
+        "response": "Execute",
+        "note": null,
+        "parameters": {
+          "AWIPSidentifier": [
+            "SPSPDT"
+          ],
+          "WMOidentifier": [
+            "WWUS86 KPDT 130958"
+          ],
+          "BLOCKCHANNEL": [
+            "EAS",
+            "NWEM",
+            "CMAS"
+          ],
+          "EAS-ORG": [
+            "WXR"
+          ]
+        },
+        "scope": "Public",
+        "code": "IPAWSv1.0",
+        "language": "en-US",
+        "web": "http://www.weather.gov",
+        "eventCode": {
+          "SAME": [
+            "SPS"
+          ],
+          "NationalWeatherService": [
+            "SPS"
+          ]
+        }
+      }
+    }
+  ],
+  "title": "Current watches, warnings, and advisories",
+  "updated": "2026-11-13T12:35:46+00:00"
+}

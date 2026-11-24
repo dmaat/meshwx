@@ -1,0 +1,770 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "arrival_time": null,
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T07:49:00-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": "ADDED",
+        "status": null,
+        "stop_sequence": 15,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78612398-OL1-1317-15-39",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78612398-OL1",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y3263",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": null,
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T07:59:00-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": "ADDED",
+        "status": null,
+        "stop_sequence": 15,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78611569-OL1-1317-15-39",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78611569-OL1",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y3245",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": null,
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T08:10:45-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": "ADDED",
+        "status": null,
+        "stop_sequence": 27,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78174862-OL1-1317-27-66",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "66",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78174862-OL1",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y1884",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": null,
+        "arrival_uncertainty": null,
+        "departure_time": null,
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": "CANCELLED",
+        "status": null,
+        "stop_sequence": 27,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78174859-1317-27-66",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "66",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78174859",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": null
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:45:26-05:00",
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T07:45:26-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 15,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78611546-1317-15-39",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78611546",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y1258",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:50:14-05:00",
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T07:50:14-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 27,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78174862-1317-27-66",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "66",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78174862",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y3295",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:56:42-05:00",
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T07:56:42-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 15,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78611569-1317-15-39",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78611569",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y1269",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:58:53-05:00",
+        "arrival_uncertainty": null,
+        "departure_time": "2026-11-13T07:58:53-05:00",
+        "departure_uncertainty": null,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 15,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-78612208-1317-15-39",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "1317",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "78612208",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "y1320",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    }
+  ],
+  "included": [
+    {
+      "attributes": {
+        "color": "FFC72C",
+        "description": "Frequent Bus",
+        "direction_destinations": [
+          "Forest Hills Station",
+          "Back Bay Station"
+        ],
+        "direction_names": [
+          "Outbound",
+          "Inbound"
+        ],
+        "fare_class": "Local Bus",
+        "listed_route": true,
+        "long_name": "Forest Hills Station - Back Bay Station",
+        "short_name": "39",
+        "sort_order": 50390,
+        "text_color": "000000",
+        "type": 3
+      },
+      "id": "39",
+      "links": {
+        "self": "/routes/39"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-39",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "color": "FFC72C",
+        "description": "Frequent Bus",
+        "direction_destinations": [
+          "Harvard Square",
+          "Nubian Station"
+        ],
+        "direction_names": [
+          "Outbound",
+          "Inbound"
+        ],
+        "fare_class": "Local Bus",
+        "listed_route": true,
+        "long_name": "Harvard Square - Nubian Station",
+        "short_name": "66",
+        "sort_order": 50660,
+        "text_color": "000000",
+        "type": 3
+      },
+      "id": "66",
+      "links": {
+        "self": "/routes/66"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-66",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 1,
+        "block_id": "A66-393",
+        "direction_id": 1,
+        "headsign": "Nubian via Allston",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78174859",
+      "links": {
+        "self": "/trips/78174859"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "66",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "66-6-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "BUS20264-hba46011-Weekday-02",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "660322",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 1,
+        "block_id": "A66-381",
+        "direction_id": 1,
+        "headsign": "Nubian via Allston",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78174862",
+      "links": {
+        "self": "/trips/78174862"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "66",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "66-6-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "BUS20264-hba46011-Weekday-02",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "660322",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": null,
+        "direction_id": 1,
+        "headsign": "Nubian via Allston",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78174862-OL1",
+      "links": {
+        "self": "/trips/78174862-OL1"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "66",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "66-6-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": null
+        },
+        "shape": {
+          "data": {
+            "id": "660322",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 1,
+        "block_id": "S39-36",
+        "direction_id": 1,
+        "headsign": "Back Bay",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78611546",
+      "links": {
+        "self": "/trips/78611546"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "39-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "BUS20264-hbs46fr1-Weekday-02",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "390179",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 1,
+        "block_id": "S39-37",
+        "direction_id": 1,
+        "headsign": "Back Bay",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78611569",
+      "links": {
+        "self": "/trips/78611569"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "39-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "BUS20264-hbs46fr1-Weekday-02",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "390179",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": null,
+        "direction_id": 1,
+        "headsign": "Back Bay",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78611569-OL1",
+      "links": {
+        "self": "/trips/78611569-OL1"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "39-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": null
+        },
+        "shape": {
+          "data": {
+            "id": "390179",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 1,
+        "block_id": "S39-38",
+        "direction_id": 1,
+        "headsign": "Back Bay",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78612208",
+      "links": {
+        "self": "/trips/78612208"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "39-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "BUS20264-hbs46fr1-Weekday-02",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "390179",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": null,
+        "direction_id": 1,
+        "headsign": "Back Bay",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "78612398-OL1",
+      "links": {
+        "self": "/trips/78612398-OL1"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "39",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "39-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": null
+        },
+        "shape": {
+          "data": {
+            "id": "390179",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "first": "https://api-v3.mbta.com/predictions?filter[stop]=1317&include=route%2Ctrip&page[limit]=8&page[offset]=0&sort=arrival_time",
+    "last": "https://api-v3.mbta.com/predictions?filter[stop]=1317&include=route%2Ctrip&page[limit]=8&page[offset]=24&sort=arrival_time",
+    "next": "https://api-v3.mbta.com/predictions?filter[stop]=1317&include=route%2Ctrip&page[limit]=8&page[offset]=8&sort=arrival_time"
+  }
+}

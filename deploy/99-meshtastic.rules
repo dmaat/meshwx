@@ -1,0 +1,41 @@
+# /etc/udev/rules.d/99-meshtastic.rules - installed by meshwx (deploy/install.sh)
+#
+# USB serial ports of common Meshtastic nodes:
+#   * group dialout, mode 0660 (the meshwx service user is in dialout);
+#   * ignored by ModemManager, whose AT-command probing can upset a node;
+#   * /dev/meshtastic -> the node (config.yaml: meshtastic.serial_port: /dev/meshtastic).
+#
+# With several matching devices plugged in, /dev/meshtastic points at one of them
+# (native-USB boards win over generic USB-UART bridges); then set serial_port to a
+# stable /dev/serial/by-id/... path instead.  Find a device's id with: lsusb
+# Board not listed?  Copy one line with its idVendor/idProduct, then run
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+# or unplug and re-plug the node.  Check the result with: ls -l /dev/meshtastic
+
+ACTION=="remove", GOTO="meshtastic_end"
+SUBSYSTEM!="tty", GOTO="meshtastic_end"
+
+# Native USB (CDC-ACM) -> /dev/ttyACM*
+# Adafruit VID: nRF52840 boards (RAK4631 239a:8029, LilyGO T-Echo 239a:0029, ...)
+ATTRS{idVendor}=="239a", ENV{MESHTASTIC_USB}="native"
+# Espressif VID: ESP32-S3/C3/C6 built-in USB (LilyGO T-Deck 303a:1001, ...)
+ATTRS{idVendor}=="303a", ENV{MESHTASTIC_USB}="native"
+# Raspberry Pi VID: RP2040 / RP2350 boards
+ATTRS{idVendor}=="2e8a", ENV{MESHTASTIC_USB}="native"
+# Seeed VID: XIAO, SenseCAP and Wio boards
+ATTRS{idVendor}=="2886", ENV{MESHTASTIC_USB}="native"
+
+# USB-UART bridge chips on ESP32 boards
+# Silicon Labs CP210x (Heltec, LilyGO T-Lora v1.3, DIY ...) -> /dev/ttyUSB*
+ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ENV{MESHTASTIC_USB}="bridge"
+# WCH CH340 (RAK11200 ...) -> /dev/ttyUSB*
+ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ENV{MESHTASTIC_USB}="bridge"
+# WCH CH9102 (T-Beam, T-Lora v2.1, Nano G1 ...) -> /dev/ttyACM* (CDC-ACM driver)
+ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", ENV{MESHTASTIC_USB}="bridge"
+
+ENV{MESHTASTIC_USB}!="?*", GOTO="meshtastic_end"
+GROUP="dialout", MODE="0660", ENV{ID_MM_DEVICE_IGNORE}="1", ENV{ID_MM_PORT_IGNORE}="1"
+ENV{MESHTASTIC_USB}=="native", SYMLINK+="meshtastic", OPTIONS+="link_priority=10"
+ENV{MESHTASTIC_USB}=="bridge", SYMLINK+="meshtastic"
+
+LABEL="meshtastic_end"

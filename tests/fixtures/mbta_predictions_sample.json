@@ -1,0 +1,739 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "arrival_time": null,
+        "arrival_uncertainty": null,
+        "departure_time": null,
+        "departure_uncertainty": null,
+        "direction_id": 0,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": "CANCELLED",
+        "status": null,
+        "stop_sequence": 70,
+        "trip_headsign": null,
+        "update_type": null
+      },
+      "id": "prediction-77886087-70075-70-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70075",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77886087",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": null
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:44:18-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:45:42-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 0,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 70,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77885728-70075-70-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70075",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77885728",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA94F",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:44:51-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:45:55-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 150,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77885973-70076-150-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70076",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77885973",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA330",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:46:04-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:47:08-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 150,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77885757-70076-150-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70076",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77885757",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA971",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:49:16-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:50:20-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 150,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77885974-70076-150-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70076",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77885974",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA324",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:51:04-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:52:28-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 0,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 70,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77886088-70075-70-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70075",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77886088",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA6AE",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:51:40-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:52:44-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 1,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 150,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77885763-70076-150-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70076",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77885763",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA7EF",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    },
+    {
+      "attributes": {
+        "arrival_time": "2026-11-13T07:56:45-05:00",
+        "arrival_uncertainty": 60,
+        "departure_time": "2026-11-13T07:58:09-05:00",
+        "departure_uncertainty": 60,
+        "direction_id": 0,
+        "last_trip": false,
+        "revenue": "REVENUE",
+        "schedule_relationship": null,
+        "status": null,
+        "stop_sequence": 70,
+        "trip_headsign": null,
+        "update_type": "MID_TRIP"
+      },
+      "id": "prediction-77885736-70075-70-Red",
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "stop": {
+          "data": {
+            "id": "70075",
+            "type": "stop"
+          }
+        },
+        "trip": {
+          "data": {
+            "id": "77885736",
+            "type": "trip"
+          }
+        },
+        "vehicle": {
+          "data": {
+            "id": "R-548CA950",
+            "type": "vehicle"
+          }
+        }
+      },
+      "type": "prediction"
+    }
+  ],
+  "included": [
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S931_-7",
+        "direction_id": 0,
+        "headsign": "Ashmont",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77885728",
+      "links": {
+        "self": "/trips/77885728"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0019",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S931_-8",
+        "direction_id": 0,
+        "headsign": "Ashmont",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77885736",
+      "links": {
+        "self": "/trips/77885736"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0019",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S931_-11",
+        "direction_id": 1,
+        "headsign": "Alewife",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77885757",
+      "links": {
+        "self": "/trips/77885757"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0020",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S931_-1",
+        "direction_id": 1,
+        "headsign": "Alewife",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77885763",
+      "links": {
+        "self": "/trips/77885763"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0020",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S933_-12",
+        "direction_id": 1,
+        "headsign": "Alewife",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77885973",
+      "links": {
+        "self": "/trips/77885973"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0019",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S933_-13",
+        "direction_id": 1,
+        "headsign": "Alewife",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77885974",
+      "links": {
+        "self": "/trips/77885974"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0019",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S933_-22",
+        "direction_id": 0,
+        "headsign": "Braintree",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77886087",
+      "links": {
+        "self": "/trips/77886087"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0020",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "bikes_allowed": 0,
+        "block_id": "S933_-23",
+        "direction_id": 0,
+        "headsign": "Braintree",
+        "name": "",
+        "revenue": "REVENUE",
+        "wheelchair_accessible": 1
+      },
+      "id": "77886088",
+      "links": {
+        "self": "/trips/77886088"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL20264-hms46fr1-Weekday-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0020",
+            "type": "shape"
+          }
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "color": "DA291C",
+        "description": "Rapid Transit",
+        "direction_destinations": [
+          "Ashmont/Braintree",
+          "Alewife"
+        ],
+        "direction_names": [
+          "South",
+          "North"
+        ],
+        "fare_class": "Rapid Transit",
+        "listed_route": true,
+        "long_name": "Red Line",
+        "short_name": "",
+        "sort_order": 10010,
+        "text_color": "FFFFFF",
+        "type": 1
+      },
+      "id": "Red",
+      "links": {
+        "self": "/routes/Red"
+      },
+      "relationships": {
+        "agency": {
+          "data": {
+            "id": "1",
+            "type": "agency"
+          }
+        },
+        "line": {
+          "data": {
+            "id": "line-Red",
+            "type": "line"
+          }
+        }
+      },
+      "type": "route"
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  },
+  "links": {
+    "first": "https://api-v3.mbta.com/predictions?filter[stop]=place-pktrm&include=route%2Ctrip&page[limit]=10&page[offset]=0&sort=arrival_time",
+    "last": "https://api-v3.mbta.com/predictions?filter[stop]=place-pktrm&include=route%2Ctrip&page[limit]=10&page[offset]=30&sort=arrival_time",
+    "next": "https://api-v3.mbta.com/predictions?filter[stop]=place-pktrm&include=route%2Ctrip&page[limit]=10&page[offset]=10&sort=arrival_time"
+  }
+}
